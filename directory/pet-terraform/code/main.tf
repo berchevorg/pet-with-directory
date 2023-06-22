@@ -1,19 +1,19 @@
 terraform {
-  cloud {
+  backend "remote" {
     organization = "georgiman"
 
     workspaces {
-      name = "pet-with-directory"
+      name = "pet-with-directory-cli"
     }
   }
 }
 
 resource "random_pet" "pet1" {
- length    = "8"
+ length    = "7"
  separator = "-"
 }
 
 resource "random_pet" "pet2" {
- length    = "8"
+ length    = "7"
  separator = "-"
 }
